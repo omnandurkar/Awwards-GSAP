@@ -71,6 +71,9 @@ body {
   .hero-heading {
     @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
   }
+  .hero-heading-s {
+    @apply uppercase font-zentry font-black text-xl sm:right-10 sm:text-sm md:text-3xl ;
+  }
 
   .about-subtext {
     @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];

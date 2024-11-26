@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Button from "./Button";
 import AnimatedTitle from "./AnimatedTitle";
 
+
 const FloatingImage = () => {
     const frameRef = useRef(null);
 
