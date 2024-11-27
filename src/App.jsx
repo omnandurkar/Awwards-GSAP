@@ -8,6 +8,9 @@ import NavBar from './components/Navbar'
 import FloatingImage from './components/Story'
 import { useLayoutEffect, useRef, useState } from "react"
 import gsap from "gsap"
+import Universe from './components/Universe'
+import WhoAreWe from './components/WhoAreWe'
+import Glance from './components/Glance'
 
 function App() {
   const comp = useRef(null);
@@ -52,7 +55,7 @@ function App() {
   }, [])
 
   return (
-    <main ref={comp} className='relative min-h-screen w-screen overflow-x-hidden bg-[#f5f3ff]'>
+    <main ref={comp} className='relative min-h-screen w-screen overflow-x-hidden '>
       <div
         id="intro-slider"
         className="h-screen p-10 bg-black font-extrabold space-y-10 text-black absolute top-0 left-0 font-spaceGrotesk z-[90] w-full flex flex-col justify-center items-center tracking-tight"
@@ -87,6 +90,9 @@ function App() {
             <About />
             <Features />
             <FloatingImage />
+            <Universe />
+            <WhoAreWe />
+            <Glance />
             <Contact />
             <Footer />
           </>
