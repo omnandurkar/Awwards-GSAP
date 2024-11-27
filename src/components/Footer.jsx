@@ -31,14 +31,14 @@ const Footer = () => {
 
                 <div className="flex gap-5">
 
-                    <a
+                    {/* <a
                         href="#privacy-policy"
                         className="text-center text-sm font-light hover:underline md:text-right"
                     >
                         Privacy Policy
-                    </a>
+                    </a> */}
                     <a href="https://www.omnandurkar.me/" target="_blank" className="text-center group  text-white text-sm font-light hover:underline md:text-right">
-                        Re-developed by Om Nandurkar
+                        Re-developed by<span className="underline"> Om Nandurkar</span>
                     </a>
                 </div>
             </div>

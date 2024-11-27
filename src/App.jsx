@@ -11,6 +11,8 @@ import gsap from "gsap"
 import Universe from './components/Universe'
 import WhoAreWe from './components/WhoAreWe'
 import Glance from './components/Glance'
+import Labels from './components/Labels'
+import Updates from './components/Updates'
 
 function App() {
   const comp = useRef(null);
@@ -72,7 +74,7 @@ function App() {
         <h1 className="special-font hero-heading uppercase text-blue-75" id="title-3">
           Ze<b>n</b>try
         </h1>
-        <div id="title-3" className='absolute bottom-0 left-0 w-full'>
+        <div id="title-3" className='absolute bottom-0 max-lg:bottom-10 left-0 w-full'>
 
           <h1 className="  text-lg md:text-xl   lg:text-2xl text-center">
             Re-developed by <span className='special-font hero-heading-s text-sm uppercase'>Om Nandurkar</span>
@@ -93,6 +95,8 @@ function App() {
             <Universe />
             <WhoAreWe />
             <Glance />
+            <Labels />
+            <Updates />
             <Contact />
             <Footer />
           </>

@@ -20,7 +20,7 @@ const Universe = () => {
                 id="enter-vault"
                 title="ENTER VAULT"
                 // leftIcon={<TiLocationArrow />}
-                containerClass="bg-[#000] mt-10 !py-4 font-bold text-white flex-center gap-1"
+                containerClass="!bg-black mt-10 !py-4 font-bold text-white flex-center gap-1"
             />
 
             <div className='flex flex-col-reverse md:flex-row justify-between w-full '>
