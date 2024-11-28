@@ -16,39 +16,42 @@ import Updates from './components/Updates'
 
 function App() {
   const comp = useRef(null);
-  const [showContent, setShowContent] = useState(false); // To manage showing the content after animation
+  const [showContent, setShowContent] = useState(false);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const t1 = gsap.timeline()
 
       t1.from("#intro-slider", {
-        scale: 1, // Start from the center (scaled down)
+        scale: 1,
         duration: 1.5,
         ease: "power3.out",
-        backgroundColor: "#000000", // Same as the intro-slider background
+        backgroundColor: "#000000",
       })
 
         .to("#intro-slider", {
-          // scale: 1, // Expand to full size
+          // scale: 1, 
           duration: 1.3,
           ease: "power3.inOut",
-          backgroundColor: "#5729ff", // Optional: Same color as slider bg
+          backgroundColor: "#5729ff",
         })
         .from(["#title-1", "#title-2", "#title-3", "#title-4"], {
-          opacity: 0,
-          y: "+=30",
-          stagger: 0.5,
+          // opacity: 0,
+          y: "-100vh",
+          stagger: 0.6,
+          ease: "circ.inOut",
         }).to(["#title-1", "#title-2", "#title-3", "#title-4"], {
           opacity: 0,
-          y: "-+30",
+          y: "-100vh",
+          ease: "back.out",
           stagger: 0.5,
         })
         .to("#intro-slider", {
-          scale: 0, // Shrink back to center
-          // opacity: 0, // Fade out the intro slider
+          scale: 0,
+          // borderRadius: "100%",
+          backgroundColor: "black",
           duration: 0.5,
-          onComplete: () => setShowContent(true) // Show content after animation finishes
+          onComplete: () => setShowContent(true)
         })
 
     }, comp)
@@ -83,7 +86,7 @@ function App() {
       </div>
       {/* </div> */}
 
-      {/* The rest of your content */}
+      
       {
         showContent && (
           <>

@@ -56,13 +56,32 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
     const handleMouseEnter = () => setHoverOpacity(1);
     const handleMouseLeave = () => setHoverOpacity(0);
 
+
+    //Video
+
+    const videoRef = useRef(null);
+
+    const autoPlay = () => {
+        if (videoRef.current) {
+            videoRef.current.play();
+        }
+    };
+
+    const pause = () => {
+        if (videoRef.current) {
+            videoRef.current.pause();
+        }
+    };
+
     return (
-        <div className="relative size-full">
+        <div className="relative size-full"  // autoPlay
+            onMouseEnter={autoPlay}
+            onMouseLeave={pause}>
             <video
+                ref={videoRef}
                 src={src}
                 loop
                 muted
-                autoPlay
                 className="absolute left-0 top-0 size-full object-cover object-center"
             />
             <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
