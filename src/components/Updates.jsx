@@ -31,7 +31,7 @@ const Updates = () => {
         });
     };
 
-    // Reset image to default position when mouse leaves
+    
     const handleMouseLeave = (index) => {
         gsap.to(imgRefs.current[index], {
             x: 0,

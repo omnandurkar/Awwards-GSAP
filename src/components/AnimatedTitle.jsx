@@ -31,7 +31,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
             );
         }, containerRef);
 
-        return () => ctx.revert(); // Clean up on unmount
+        return () => ctx.revert(); 
     }, []);
 
     return (
